@@ -1,17 +1,20 @@
 function scuberGreetingForFeet(feet) {
 
+  // Updated to return result instead of multiple return
+  let result
   if (feet <= 400) {
-    return "This one is on me!"
+    result = "This one is on me!"
 
   } else if (feet >= 400 && feet <= 2000) {
-    return "That will be twenty bucks."
+    result = "That will be twenty bucks."
 
   } else if (feet > 2000 && feet <= 2500) {
-    return "I will gladly take your thirty bucks."
+    result = "I will gladly take your thirty bucks."
 
   } else {
-    return "No can do."
+    result = "No can do."
   }
+  return result
 }
 
 function ternaryCheckCity(city) {
@@ -20,13 +23,13 @@ function ternaryCheckCity(city) {
 }
 
 function switchOnCharmFromTip(tip) {
+
+  // Updated to remove unreachable break since we're return  
   switch (tip) {
     case "generous":
       return "Thank you so much."
-      break
     case "not as generous":
       return "Thank you."
-      break
 
     default:
       return "Bye."
